@@ -60,15 +60,15 @@
       </div>
 
 			<div class="menu-socials">
-				<button class="btn" onclick="window.location.href='https://www.facebook.com/p/Technical-Club-NIT-Uttarakhand-100063961633327/?paipv=0&eav=AfZJJ6VmeJaaYhbYXdO22lXoHynmmCL6t7KHxjCFySi3p7y79N8nUheh9Fl8H9pls20&_rdr'">
+				<button class="btn">
 					<i class='bx bxl-facebook' ></i>
 				</button>
 
-				<button class="btn" onclick="window.location.href='https://www.instagram.com/techclubnituk/'">
-					<i class='bx bxl-instagram'  ></i>
+				<button class="btn">
+					<i class='bx bxl-instagram' ></i>
 				</button>
 
-				<button class="btn" onclick="window.location.href='https://www.linkedin.com/in/tcnituk/?originalSubdomain=in'">
+				<button class="btn">
 					<i class='bx bxl-linkedin' ></i>
 				</button>
 			</div>
@@ -98,28 +98,9 @@
    <div class="container">
    <div class="wrapper">
     <h1>Event Registration</h1>
-    <div class="show-help">
-      <a class="learn-more show-qr" onclick="toggleQr()">Bank Account Details<i class='bx bx-chevron-right' id="qr-arrow"></i></a>
-      <a class="learn-more show-qr" onclick="window.location.href='registration.pdf'">How to Register?</a>
-    </div>
-    
-    <div class="qr-container" id="qr-container">
-      <div class="qr-info">
-        <p><b>Account Number: </b>37530566069</p>
-        <p><b>IFSC Code: </b>SBIN0003181</p>
-        <p><b>Bank Name: </b>State Bank Of India</p>
-        <p><b>MICR Code: </b>246002902</p>
-      </div>
-      <div class="qr-info fee-details">
-        <p><b>Entry Fee: </b>Rs.349 + 18% GST / person </p>
-        <p><b>Flagship Fee: </b>Rs.399 + 18% GST / Team</p>
-        <p><b>Entry Fee <br>(NITUK students only): </b> Rs.149 / person</p>
-        <p><b>Flagship Fee <br>(NITUK students only): </b> Rs.199 / team</p>
-      </div>
-    </div>
-    <form class="general-form" id="myForm" action="https://script.google.com/macros/s/AKfycbzf_beKdwp6ykSXPDVMEZoIRgRuJCeYR0pvYfK-EGhd4oZoVdyKoWblmkra1J0rV8MI/exec" method="post">
+    <form id="myForm" action="https://script.google.com/macros/s/AKfycbxRyyFDqt1IDab-ioGIRbUbB-JcByetyPFRO4TMPO4tuCiodF5kvPchzhIy50kXE2R5mg/exec" method="post">
       <div class="input-box">
-          <input type="text" name="uid" id="uid" placeholder="Payment ID" required>
+          <input type="text" name="uid" id="uid" placeholder="Unique Name" required>
           <i class='bx bxs-id-card'></i>
       </div>
       <div class="input-box">
@@ -136,30 +117,22 @@
       </div>
 
       <div class="input-box">
-        <!-- <input type="text" name="eventName" id="eventName" placeholder="Drone Race"  required readonly>
-        <i class='bx bx-calendar-event'></i> -->
-
         <select id="eventName" name="eventName" required>
-          <option value="Fpv drone race">Only Entry Pass</option>
             <option value="Fpv drone race">FPV drone race</option>
+            <option value="Fpv drone race">Only Entry Pass</option>
             <option value="Treasure hunt">Treasure hunt</option>
             <option value="Robowars">Robowars</option>
             <option value="Hackathon">Hackathon</option>
+            <option value="Esports gaming">Esports gaming</option>
             <option value="Techno quiz">Techno quiz</option>
-            <option value="Young scientist innovation">Young Scientist Innovation</option>
-            <option value="Abstract idea submission">Innovate 360</option>
+            <option value="Young scientist innovation">Young scientist innovation</option>
+            <option value="Abstract idea submission">Abstract idea submission</option>
             <option value="Teslaculation">Teslaculation</option>
             <option value="Bridge designing">Bridge designing</option>
             <option value="Matlab run">MATLAB run</option>
             <option value="Cadathon">Cadathon</option>
         </select>
       </div>
-
-      <div class="input-box">
-          <input type="text" name="collegeid" id="collegename" placeholder="Institute Name" required>
-          <i class='bx bx-buildings'></i>
-      </div>
-
 
       <div class="checkbox-option">
       <div class="input-box">
@@ -169,92 +142,14 @@
       <div id="teamOptions" style="display:none;">
           <label for="teamSize">Select team size:</label>
           <select id="teamSize" name="teamSize" onchange="generateInputBoxes()">
-              <option value="1" selected="selected">2</option>
+              <option value="1">2</option>
               <option value="2">3</option>
-              <option value="3">4</option>
-              <option value="4">5</option>
           </select>
       </div>
     </div>
-      <button class="btn" type="submit">Submit</button>
+      <button class="btn" type="submit" onclick="window.href.location = 'https://rzp.io/l/M3l2veauBD'">Submit</button>
       <b><a class="learn-more" onclick="window.location.href='registration.pdf'">Need Help?</a></b>
   </form>
-
-  <form class="college-form" id="myForm-nit" action="https://script.google.com/macros/s/AKfycbzp1Wn9czq_sr1lweCRAxtz-cZIVlGjfGHyzCIJ_KigGAnw5_oJtkuH_tGxdKzalRog4A/exec" method="post">
-    <p><b>NOTE</b> 
-      This form is exclusively reserved for students of NIT UK. If you are not affiliated with NIT UK and choose to do registration through this form, please note that refunds will not be issued, and your registration will be cancelled.
-    </p>
-    <div class="input-box">
-        <input type="text" name="uid" id="uid" placeholder="Payment ID" required>
-        <i class='bx bxs-id-card'></i>
-    </div>
-
-    <div class="input-box">
-      <select id="eventName" name="eventName" required>
-        <option value="Fpv drone race">Only Entry Pass</option>
-          <option value="Fpv drone race">FPV drone race</option>
-          <option value="Treasure hunt">Treasure hunt</option>
-          <option value="Robowars">Robowars</option>
-          <option value="Hackathon">Hackathon</option>
-          <option value="Techno quiz">Techno quiz</option>
-          <option value="Young scientist innovation">Young Scientist Innovation</option>
-          <option value="Abstract idea submission">Innovate 360</option>
-          <option value="Teslaculation">Teslaculation</option>
-          <option value="Bridge designing">Bridge designing</option>
-          <option value="Matlab run">MATLAB run</option>
-          <option value="Cadathon">Cadathon</option>
-      </select>
-    </div>
-
-    <div class="input-box">
-        <input type="text" name="name" id="name" placeholder="Full Name" required>
-        <i class='bx bx-rename'></i>
-    </div>
-    <div class="input-box">
-        <input type="phone" name="phone" id="phone" placeholder="Phone Number" required>
-        <i class='bx bx-phone'></i>
-    </div>
-    <div class="input-box">
-        <input type="email" name="email" id="email" placeholder="College Email" required>
-        <i class='bx bxs-user'></i>
-    </div>
-
-    <div class="input-box">
-        <input type="text" name="collegeid" id="collegename" placeholder="Roll Number" required>
-        <i class='bx bx-buildings'></i>
-    </div>
-
-
-
-
-    <div class="checkbox-option">
-    <div class="input-box">
-        <label for="participate">Participating in team?</label>
-        <input class="checkbox" type="checkbox" id="participateNit" name="participate" onclick="showOptionsNit()">
-    </div>
-    <div id="teamOptionsNit" style="display:none;">
-        <label for="teamSize">Select team size:</label>
-        <select id="teamSizeNit" name="teamSize" onchange="generateInputBoxesNit()">
-            <option value="1" selected>2</option>
-            <option value="2">3</option>
-            <option value="3">4</option>
-            <option value="4">5</option>
-        </select>
-    </div>
-  </div>
-    <button class="btn" type="submit">Submit</button>
-    <b><a class="learn-more" onclick="window.location.href='registration.pdf'">Need Help?</a></b>
-</form>
-  <div class="checkbox-option check-student">
-    <div class="input-box">
-      <label for="participate">Are you NIT UK Student?</label>
-      <input  id="nit-uk-checkbox" onchange="toggleCollegeForm()" class="checkbox" type="checkbox">
-    </div>
-  </div>
-  <div class="unstop-container">
-    <p>OR</p>
-    <a class="unstop" href="https://unstop.com/college-fests/prodyogeeky24-national-institute-of-technology-nit-uttarakhand-213881">Register Through Unstop</a>
-  </div>
    </div>
   </div>
 

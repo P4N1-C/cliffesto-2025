@@ -2,7 +2,7 @@
 
 function toggleMenu() {
   var menu = document.querySelector('.menu');
-  menu.style.right = (menu.style.right === '-100%' || menu.style.right === '') ? '0%' : '-100%';
+  menu.style.right = (menu.style.right === '0%' || menu.style.right === '') ? '-100%' : '0%';
 
   gsap.from('.menu-socials', {
     x: '-100%',
@@ -55,7 +55,6 @@ function showOptions() {
 
   if (checkbox.checked) {
       optionsDiv.style.display = "block";
-      generateInputBoxes();
   } else {
       optionsDiv.style.display = "none";
       clearInputBoxes();
@@ -63,7 +62,7 @@ function showOptions() {
 }
 
 function clearInputBoxes() {
-  var form = document.getElementById('myForm');
+  var form = document.querySelector('form');
   var existingInputBoxes = form.querySelectorAll('.team-member-input');
   existingInputBoxes.forEach(function (inputBox) {
       inputBox.remove();
@@ -98,92 +97,25 @@ function generateInputBoxes() {
   }
 }
 
+const myForm = document.getElementById("myForm");
+// Function to check UID existence before form submission
+myForm.addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent default form submission
 
-// ---------------toggle qrCode--------------------
+  var uid = document.getElementById("uid").value; // Get UID from the form
 
-function toggleQr() {
-  var qrContainer = document.getElementById('qr-container');
-  qrContainer.classList.toggle('show');
-  var qrArrow = document.getElementById('qr-arrow');
-  if (qrContainer.classList.contains('show')) {
-    qrArrow.style.transform = 'rotate(90deg)';
+  // You'll need to implement Google Sheets API call to check UID existence.
+  // For simplicity, let's assume existingUIDs is an array of existing UIDs
+  var existingUIDs = [];
+
+  
+
+  // Check if UID already exists
+  if (existingUIDs.includes(uid)) {
+    alert("UID already exists! Please choose a different one.");
   } else {
-    qrArrow.style.transform = 'rotate(0deg)';
+    // If UID doesn't exist, submit the form
+    event.target.submit();
+    myForm.reset();
   }
-}
-
-
-
-// ---------------- nit ? ----------------------
-
-function toggleCollegeForm() {
-  var generalForm = document.querySelector('.general-form');
-  var collegeForm = document.querySelector('.college-form');
-  var wrapper = document.querySelector('.wrapper');
-  var checkbox = document.getElementById('nit-uk-checkbox');
-
-  if (checkbox.checked) {
-    generalForm.style.display = 'none';
-    collegeForm.style.display = 'block';
-
-    wrapper.scrollTop = 0;
-  } else {
-    generalForm.style.display = 'block';
-    collegeForm.style.display = 'none';
-
-    wrapper.scrollTop = 0;
-  }
-}
-
-// ------------------------for NIT Students---------------------------
-
-
-
-function showOptionsNit() {
-  var checkbox = document.getElementById("participateNit");
-  var optionsDiv = document.getElementById("teamOptionsNit");
-
-  if (checkbox.checked) {
-      optionsDiv.style.display = "block";
-      generateInputBoxesNit();
-  } else {
-      optionsDiv.style.display = "none";
-      clearInputBoxesNit();
-  }
-}
-
-function clearInputBoxesNit() {
-  var form = document.getElementById('myForm-nit');
-  var existingInputBoxes = form.querySelectorAll('.team-member-input-nit');
-  existingInputBoxes.forEach(function (inputBox) {
-      inputBox.remove();
-  });
-}
-
-function generateInputBoxesNit() {
-  var teamSize = document.getElementById("teamSizeNit").value;
-  var form = document.getElementById('myForm-nit');
-
-  // Remove previous input boxes
-  clearInputBoxesNit();
-
-  // Generate new input boxes based on team size
-  for (var i = 1; i <= teamSize; i++) {
-      var inputBox = document.createElement("div");
-      inputBox.className = "input-box team-member-input-nit";
-
-      var input = document.createElement("input");
-      input.type = "text";
-      input.name = "memberName" + i;
-      input.placeholder = "Member " + i + " Name";
-      inputBox.appendChild(input);
-
-      var uidInput = document.createElement("input");
-      uidInput.type = "text";
-      uidInput.name = "memberUID" + i;
-      uidInput.placeholder = "Member " + i + " Email";
-      inputBox.appendChild(uidInput);
-
-      form.insertBefore(inputBox, form.lastElementChild);
-  }
-}
+});

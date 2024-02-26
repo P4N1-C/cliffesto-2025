@@ -211,6 +211,7 @@ section {
   filter: brightness(40%);
   overflow: hidden;
   z-index: -1;
+  overflow: hidden;
 }
 
 .main-body {
@@ -423,108 +424,13 @@ select option {
   font-size: 10px;
 }
 
-.team-member-input, .team-member-input-nit {
+.team-member-input {
   display: flex;
   margin: 0;
   gap: 5px;
 } 
 
-.show-help {
-  display: flex;
-  justify-content: space-between;
-}
 
-.show-qr {
-  font-size: 12px;
-  align-items: center;
-  margin-left: 10px;
-}
-
-.wrapper h1 {
-  margin-bottom: 15px;
-}
-
-.wrapper .qr-container {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  padding: 0 10%;
-  display: none;
-  transition: all 1s;
-  margin-top: 20px;
-}
-
-.qr-container.show {
-  display: flex;
-}
-
-#qr-arrow {
-  transition: all ease .3s;
-}
-
-.qr-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-left: -40px;
-}
-
-.qr-info p {
-  width: 100%;
-  font-size: 12px;
-  white-space: nowrap;
-}
-
-.fee-details {
-  margin-left: 20px;
-}
-
-.wrapper .qr-container img {
-  height: 100px;
-}
-
-.check-student {
-  margin-top: 20px;
-  width: 100%;
-}
-/* -------------NIT student ?-------------- */
-
-.general-form {
-  display: block;
-}
-.college-form {
-  display: none;
-}
-
-.college-form p {
-  font-size: 12px;
-  text-align: center;
-}
-
-.college-qr-code {
-  display: none;
-  margin-left: 0;
-  width: 100%;
-}
-
-.unstop-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-} 
-
-.unstop-container p {
-  text-align: center;
-}
-
-.unstop {
-  color: white;
-  width: 100%;
-  text-align: center;
-}
 
 /* ---media-queries--- */
 
@@ -559,16 +465,6 @@ select option {
   .container {
     width: 100%;
     border: none;
-  }
-
-  .qr-container {
-    flex-direction: column;
-  }
-
-  .fee-details {
-    margin-left: -40px;
-    border-top: 2px solid white;
-    margin-top: 10px;
   }
 }
 
