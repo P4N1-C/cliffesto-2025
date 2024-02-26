@@ -411,6 +411,18 @@ body.dark {
   right: auto;
 }
 
+.guidelines-container {
+  width: 100%;
+  align-items: center;  
+  display: flex;
+  justify-content: center;
+}
+
+.guidelines {
+  color: black;
+  font-weight: bold;
+}
+
 /* -----------media queries-------------- */
 
 @media (max-width: 900px) {
