@@ -417,6 +417,12 @@ select::placeholder {
 }
 
 
+/* Styling Mail Link */
+.sponser-mail{
+  text-decoration: none;
+  color: white;
+}
+
 /* ---media-queries--- */
 
 @media (max-width: 990px) {
