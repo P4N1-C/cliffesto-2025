@@ -1,6 +1,6 @@
 /* FONTS  */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/bebas-neue");
 
 @font-face {
   font-family: Anurati;
@@ -10,15 +10,18 @@
 /* COLORS */
 
 :root {
-  --orchid: #9d00c6 ;
+  --orchid: #9d00c6;
   --robin-egg-blue: #00ffed;
   --bg-color: rgb(22, 22, 22);
-  --redwood: #BD445Bff;
-  --brilliant-rose: #E462A7ff;
-  --cb: cubic-bezier(.05, .61, .41, .95);
+  --redwood: #bd445bff;
+  --brilliant-rose: #e462a7ff;
+  --cb: cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  --width-default: min(1200px, 90vw);
+  --diameter: 1432px;
 }
-
-
+svg {
+  color: #fff;
+}
 /* ----------------DEFAULT STYLING--------------  */
 
 * {
@@ -29,7 +32,7 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -84,7 +87,7 @@ section {
 .header img {
   max-width: 100px;
   width: auto;
-} 
+}
 
 .header .navbar-items {
   display: flex;
@@ -96,7 +99,7 @@ section {
 
 .header .navbar-items a {
   color: white;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   font-family: anurati, poppins;
 }
 
@@ -109,6 +112,40 @@ section {
 
 .header .menu-icon:hover {
   cursor: pointer;
+}
+
+/* ------------btn--------------- */
+
+.btn {
+  background: transparent;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  color: black;
+  /* cursor: pointer; */
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  background: white;
+  transition: 0.3s ease;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
 }
 
 /* --------menu styling--------- */
@@ -127,7 +164,7 @@ section {
   display: flex;
 }
 
-.menu .menu-content{
+.menu .menu-content {
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -140,6 +177,7 @@ section {
   display: flex;
   align-items: center;
   padding-left: 4rem;
+  color: white;
 }
 
 .menu .menu-content .menu-list {
@@ -160,7 +198,7 @@ section {
 .menu .menu-content .menu-list a {
   font-size: 3rem;
   color: white;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   font-family: Anurati, poppins;
 }
 
@@ -183,7 +221,7 @@ section {
   font-size: 2rem;
 }
 
-.menu .menu-sidebar{
+.menu .menu-sidebar {
   width: 30%;
   border-left: 1px solid white;
   z-index: 9999;
@@ -211,159 +249,235 @@ section {
   border-radius: 2rem;
 }
 
-
 /* ---------------content---------------- */
-body.dark {
-  color: white;
-  background-color: rgb(10, 10, 10);
-}
 
-.bg-container {
-  position: fixed;
+.slider {
+  color: #eee;
+  width: 100vw;
   height: 100vh;
-  width: 100%;
-  background: url(images/bg-2.jpg) no-repeat;
-  background-size: cover;
-  filter: brightness(40%);
-  top: -20%;
+  position: relative;
+  overflow: hidden;
 }
-
-.cards {
-  display: flex;
-  max-width: 800px;
-  width: calc(100% - 100px);
-  height: 400px;
-}
-
-.cards .card .info .title {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.cards .card .label .icon {
+.slider .list .item {
+  position: absolute;
+  inset: 0 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 40px;
-  height: 40px;
-  background-color: white;
-  color: var(--color);
-  border-radius: 50%;
+  transition: 1s;
 }
-
-.cards .card .label .info {
+.slider .list .item .content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  text-align: left;
+  gap: 80px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-family: Poppins;
+  text-shadow: 0 0 80px #000;
+  margin-top: 100px;
+}
+.slider .list .item .content h2 {
+  font-size: 10em;
+  font-family: "Bebas Neue", sans-serif;
+  line-height: 0.9em;
+  transform: translateY(-100%);
+  transition: transform 1s;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.slider .list .item .content p:last-child {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 10px;
-  white-space: pre;
-  transition: 1s var(--cb);
+  justify-content: start;
+  align-items: end;
+  padding-bottom: 25px;
 }
 
-.cards .card {
-  position: relative;
-  min-width: 60px;
-  background: var(--bg);
-  overflow: hidden;
-  margin: 5px;
-  background-size: cover;
+.slider .list .item .image {
+  flex-shrink: 0;
+  width: var(--diameter);
+  height: var(--diameter);
+  background-image: var(--url);
+  background-size: var(--diameter) var(--diameter);
   background-position: center;
-  cursor: pointer;
-  transition: 0.5s var(--cb);
-  border-radius: 30px;  
+  border-radius: 50%;
+  transform: rotate(-60deg);
+  position: relative;
+  transition: 1s;
 }
-
-.cards .card .label {
-  display: flex;
+.slider .list .item .image::before,
+.slider .list .item .image::after {
   position: absolute;
-  right: 0;
-  height: 40px;
-  transition: 0.5s var(--cb);
+  width: 70%;
+  height: 70%;
+  content: "";
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-120deg);
+  background-image: linear-gradient(to right, #0004, #0004), var(--url);
+  background-size: var(--diameter) var(--diameter);
+  background-position: center;
+  transition: 1s;
+}
+.slider .list .item .image::after {
+  width: 30%;
+  height: 30%;
+  background-image: var(--url);
+  border: 3px solid #fff2;
+  transform: translate(-50%, -50%) rotate(-170deg);
 }
 
-.cards .card.active .label {
-  bottom: 20px;
-  left: 20px;
+.slider .list .item .image {
+  filter: blur(30px);
 }
 
-.cards .card.active {
-  flex-grow: 10000;
-  background-size: cover;
+.slider .list .item {
+  pointer-events: none;
+  opacity: 0;
 }
 
-.cards .card:not(.active) .label {
-  bottom: 10px;
-  left: 10px;
-}
-
-.cards .card .shadow {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100px;
-  background: linear-gradient(
-    0, #0004, transparent
-  );
-}
-
-.cards .card.active .info {
+.slider .list .item.active {
+  pointer-events: auto;
   opacity: 1;
 }
+.slider .item.active .image {
+  filter: blur(0px);
+  transform: rotate(0deg);
+}
+.slider .item.active .image::before,
+.slider .item.active .image::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.slider .list .item.active .content h2 {
+  transform: translateY(0);
+}
 
-.cards .card:not(.active) .info {
+.slider .list .item.active ~ .item {
   opacity: 0;
-} 
-
-.cards .card .icon i {
-  font-size: 20px;
+}
+.slider .item.active ~ .item .image {
+  transform: rotate(60deg);
+}
+.slider .item.active ~ .item .image::before {
+  transform: translate(-50%, -50%) rotate(120deg);
+}
+.slider .item.active ~ .item .image::after {
+  transform: translate(-50%, -50%) rotate(170deg);
+}
+.slider .list .item.active ~ .item .content h2 {
+  transform: translateY(100%);
 }
 
-.btn { 
-  background: transparent;
-  align-items: center;
-  color: white;
-  overflow: hidden;
-  position: relative;
-  transition: .3s ease;
+.arrows {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  width: var(--width-default);
+  display: flex;
+  justify-content: space-between;
 }
-
-.btn:hover {
-  color: black;
+.arrows button {
+  all: unset;
   cursor: pointer;
 }
 
-.btn::before {
-  content: '';
+.slider .list::after {
   position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 0;
-  background: white;
-  transition: .3s ease;
-  z-index: -1;
+  content: "";
+  bottom: 0;
+  width: min(1000px, 100vw);
+  height: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-size: cover;
+  background-position: top;
+  pointer-events: none;
+  animation: showModel 1s ease-in-out 1 forwards;
+}
+.content button {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 10px 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
+  color: white;
+  border-radius: 50px;
 }
 
-.btn:hover::before {
-  width: 100%;
-  left: 0;
-  right: auto;
+.content button:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.5s ease;
 }
 
-/* -----------media queries-------------- */
+.content button:hover svg {
+  color: black;
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+}
 
-@media (max-width: 900px) {
+@keyframes showModel {
+  from {
+    transform: translateX(-50%) scale(1.3) translateY(88px);
+  }
+}
+
+.arrows button.d-none {
+  opacity: 0;
+  pointer-events: none;
+}
+@media all and (max-width: 1024px) {
+  .slider .list .item .content {
+    grid-template-columns: repeat(2, 300px);
+  }
+  .slider .list .item .content h2 {
+    font-size: 8em;
+  }
+}
+@media all and (max-width: 767px) {
+  .slider .list .item .content {
+    grid-template-columns: 80%;
+    justify-content: center;
+    gap: 20px;
+    top: 70px;
+  }
+  .slider .list .item .content h2 {
+    font-size: 4em;
+  }
+  .slider .list .item .content p {
+    font-size: small;
+  }
+}
+
+@media (max-width: 1100px) {
+  html {
+    overflow-x: hidden;
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 850px) {
   .menu {
     width: 100%;
   }
 }
 
 @media (max-width: 630px) {
-  .menu .menu-content .menu-list .menu-home a{
-    font-size: 25px;
+  html {
+    font-size: 40%;
   }
-  
   .header .navbar-items {
     display: none;
   }
@@ -371,28 +485,7 @@ body.dark {
 
 @media (max-width: 550px) {
   .menu .menu-socials {
-    right: 3rem;
+    right: 7rem;
     left: auto;
   }
-  
-  .cards .card.active {
-    flex-grow: 10000;
-    background-size: auto 100%;
-    height: 400px;
-  }
-
-  .cards .card {
-    margin: 5px;
-    width: 100%;
-    height: 70px;
-  }
-
-  .cards {
-    display: flex;
-    flex-direction: column;
-    max-width: 800px;
-    width: calc(100% - 70px);
-    height: 60%;
-  }
-
 }

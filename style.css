@@ -1,6 +1,6 @@
 /* FONTS  */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 @font-face {
   font-family: Anurati;
@@ -13,10 +13,9 @@
   --orchid: #9d00c6;
   --robin-egg-blue: #00ffed;
   --bg-color: rgb(22, 22, 22);
-  --redwood: #BD445Bff;
-  --brilliant-rose: #E462A7ff;
+  --redwood: #bd445bff;
+  --brilliant-rose: #e462a7ff;
 }
-
 
 /* ----------------DEFAULT STYLING--------------  */
 
@@ -28,7 +27,7 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: Anurati, 'Poppins', sans-serif;
+  font-family: Anurati, "Poppins", sans-serif;
 }
 
 html {
@@ -85,7 +84,7 @@ section {
 .header img {
   max-width: 100px;
   width: auto;
-} 
+}
 
 .header nav {
   display: block;
@@ -101,7 +100,7 @@ section {
 
 .header .navbar-items a {
   color: white;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
 }
 
 .header .menu-icon {
@@ -112,7 +111,7 @@ section {
 }
 
 .header .menu-icon:hover {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 /* --------menu styling--------- */
@@ -131,7 +130,7 @@ section {
   display: flex;
 }
 
-.menu .menu-content{
+.menu .menu-content {
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -164,7 +163,7 @@ section {
 .menu .menu-content .menu-list a {
   font-size: 3rem;
   color: white;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
 }
 
 .menu .menu-socials {
@@ -186,7 +185,7 @@ section {
   font-size: 2rem;
 }
 
-.menu .menu-sidebar{
+.menu .menu-sidebar {
   width: 30%;
   border-left: 1px solid white;
   z-index: 9999;
@@ -215,9 +214,7 @@ section {
   padding: 1rem;
 }
 
-
 /* ------------------LANDING PAGE---------------------- */
-
 
 .landing-page {
   height: 100vh;
@@ -227,10 +224,32 @@ section {
   justify-content: center;
   align-items: center;
   background: rgb(22, 22, 22);
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
-.landing-page::before, 
+.landing-bg-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-image: url(images/bg-1.png);
+  background-position: center;
+  position: relative;
+}
+
+.landing-page-img {
+  position: absolute;
+  height: 60vh;
+  width: 20%;
+}
+
+.landing-page-img img {
+  height: 100%;
+}
+
+.landing-page::before,
 .footer::before {
   content: "";
   background-image: conic-gradient(
@@ -241,16 +260,16 @@ section {
     #9d00c6 360deg
   );
   position: absolute;
-  width:500%;
-  height:500%;
+  width: 500%;
+  height: 500%;
   animation: rotate linear 8s infinite;
-} 
+}
 
 .landing-page::after,
 .footer::after {
   content: "";
   position: absolute;
-  inset: .3rem;
+  inset: 0.3rem;
   background-color: rgb(22, 22, 22);
 }
 
@@ -259,17 +278,17 @@ section {
   z-index: 20;
   position: absolute;
   top: 0.3rem;
-  bottom:  0.3rem;
+  bottom: 0.3rem;
   width: 50%;
   overflow: hidden;
 }
 
 .landing-page .left-img-container {
-  left: .3rem;
+  left: 0.3rem;
 }
 
 .landing-page .right-img-container {
-  right: .3rem;
+  right: 0.3rem;
 }
 
 .landing-page .left-img-container img,
@@ -293,12 +312,8 @@ section {
 .landing-page .title h1 {
   font-size: 9rem;
   letter-spacing: 1.5rem;
-  text-shadow: 0 0 10px #9d00c6,
-  0 0 20px #9d00c6,
-  0 0 40px #9d00c6,
-  0 0 80px #9d00c6,
-  0 0 120px #9d00c6;
-  margin-left: 9rem;
+  text-shadow: 0 0 10px #9d00c6, 0 0 20px #9d00c6, 0 0 40px #9d00c6,
+    0 0 80px #9d00c6, 0 0 120px #9d00c6;
   white-space: nowrap;
 }
 
@@ -306,11 +321,8 @@ section {
   z-index: 20;
   position: absolute;
   bottom: 40px;
-  text-shadow: 0 0 10px #9d00c6,
-  0 0 20px #9d00c6,
-  0 0 40px #9d00c6,
-  0 0 80px #9d00c6,
-  0 0 120px #9d00c6;
+  text-shadow: 0 0 10px #9d00c6, 0 0 20px #9d00c6, 0 0 40px #9d00c6,
+    0 0 80px #9d00c6, 0 0 120px #9d00c6;
   font-size: 2.5rem;
   animation: jumpDown 2s infinite;
 }
@@ -319,6 +331,17 @@ section {
 
 .about {
   display: flex;
+  position: relative;
+}
+
+.about-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  opacity: 1;
+  background-image: url(images/bg-2.png);
+  background-size: contain;
 }
 
 .about .about-left-section,
@@ -328,6 +351,15 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.about .about-left-section {
+  align-items: center;
+  justify-content: center;
+}
+
+.about .about-left-section img {
+  /* width: 100%; */
+  height: 100%;
 }
 
 .about .about-right-section,
@@ -349,7 +381,7 @@ section {
 .contact .contact-left-section h3 {
   font-size: 5rem;
   margin-bottom: 4rem;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
 }
 
 .about .about-right-section p,
@@ -359,13 +391,23 @@ section {
   max-width: 80%;
   font-family: poppins;
   font-size: 1.4rem;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
 }
 
 /* -------------EVENTS------------- */
 
 .events {
   display: flex;
+}
+
+.event-main-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  opacity: 1;
+  background-image: url(images/bg-3.png);
+  background-size: cover;
 }
 
 .events .event-left-section,
@@ -381,9 +423,9 @@ section {
 .events .event-left-section button {
   padding: 1.2rem 3%;
   font-size: 1.5rem;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   border-radius: 5px;
-  border: .2rem solid white;
+  border: 0.2rem solid white;
 }
 
 .event-right-section {
@@ -397,7 +439,7 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem; 
+  gap: 1rem;
 }
 
 .event-right-section .event-info h1 {
@@ -422,45 +464,45 @@ section {
   gap: 1rem;
 }
 
-.event-right-section .event-container .event-column h2{
+.event-right-section .event-container .event-column h2 {
   font-family: poppins;
   font-weight: 400;
   text-align: center;
 }
 
-.event-right-section .event-container .event-column  img{
+.event-right-section .event-container .event-column img {
   height: 100px;
   width: 100px;
   border-radius: 50%;
   border: 2px solid white;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 /* generelised .btn class  */
 
-.btn { 
+.btn {
   background: transparent;
   align-items: center;
   color: white;
   overflow: hidden;
   position: relative;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .btn:hover {
   color: black;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
   width: 0;
   background: white;
-  transition: .3s ease;
+  transition: 0.3s ease;
   z-index: -1;
 }
 
@@ -507,7 +549,7 @@ section {
   height: 130px;
 }
 
-.about-club-right-section .top-row{
+.about-club-right-section .top-row {
   height: 130px;
   gap: 20px;
 }
@@ -533,7 +575,7 @@ section {
   max-width: 80%;
   font-family: poppins;
   font-size: 1.4rem;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   text-align: center;
 }
 
@@ -575,7 +617,7 @@ section {
   height: 100%;
   border-radius: 50%;
   border: 1px solid white;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .navi-row h1 {
@@ -592,7 +634,7 @@ section {
 .navi-row .navi-row-content p {
   font-family: poppins;
   font-size: 1.3rem;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 
 .navi-right-section h1 {
@@ -600,7 +642,6 @@ section {
   font-size: 4rem;
   margin-bottom: 50px;
 }
-
 
 /* --------------------CONTACT US---------------------- */
 
@@ -620,7 +661,7 @@ section {
   justify-content: center;
   filter: brightness(40%);
   overflow: hidden;
-} 
+}
 
 .contact .contact-left-section {
   z-index: 1;
@@ -635,7 +676,7 @@ section {
   justify-content: center;
 }
 
-.contact .contact-right-section form{
+.contact .contact-right-section form {
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
@@ -645,41 +686,41 @@ section {
   padding: 0 7rem;
 }
 
-.contact .contact-right-section form .input-field{
+.contact .contact-right-section form .input-field {
   width: 100%;
 }
 
 .contact .contact-right-section form .input-field input,
-.contact .contact-right-section form .textarea-field textarea{
+.contact .contact-right-section form .textarea-field textarea {
   width: 100%;
   text-align: start;
   padding: 1rem 2rem;
   font-size: 1.5rem;
-  background: rgba(22, 22, 22, 1);
+  background: rgba(22, 22, 22, 0.4);
   color: white;
-  font-family: poppins; 
+  font-family: poppins;
   border-radius: 2rem;
   border: 1px solid white;
 }
 
 .contact .contact-right-section form .input-field input::placeholder,
-.contact .contact-right-section form .textarea-field textarea::placeholder{
+.contact .contact-right-section form .textarea-field textarea::placeholder {
   color: white;
 }
 
-.contact .contact-right-section form .textarea-field textarea{
+.contact .contact-right-section form .textarea-field textarea {
   width: 100%;
   resize: none;
   height: 200px;
 }
 
 .contact .contact-right-section form .contact__button {
-  border: .2rem solid white;
+  border: 0.2rem solid white;
   font-size: 1.5rem;
   width: 100%;
   border-radius: 2rem;
   font-family: poppins;
-  padding: .6rem 0;
+  padding: 0.6rem 0;
   margin-top: 2rem;
 }
 
@@ -693,7 +734,7 @@ section {
   justify-content: center;
   align-items: center;
   background: rgb(22, 22, 22);
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .footer .footer-left-section {
@@ -710,6 +751,7 @@ section {
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  padding-top: 20px;
 }
 
 .footer .footer-left-section img {
@@ -718,19 +760,19 @@ section {
 
 .footer .footer-left-section .title-tagline h3 {
   font-size: 1.5vw;
-  letter-spacing: .4rem;
+  letter-spacing: 0.4rem;
 }
 
 .footer .footer-left-section .title-tagline p {
   font-size: 1.5rem;
   font-family: poppins;
-  letter-spacing: .4rem;
+  letter-spacing: 0.4rem;
 }
 
 .footer .footer-left-section .left-section-img {
   width: 100%;
   height: 100%;
-  background: url(images/whote-cube.jpg);
+  background: url(images/whole-cube.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -748,7 +790,7 @@ section {
 .footer .footer-middle-section .middle-section-img {
   width: 100%;
   height: 100%;
-  background: url(images/card.jpg);
+  background: url(images/card-1.jpg);
   background-size: cover;
   position: absolute;
   display: flex;
@@ -764,7 +806,7 @@ section {
 }
 
 .footer .footer-middle-section .middle-section-content button {
-  border: .2rem solid white;
+  border: 0.2rem solid white;
   padding: 1rem 2rem;
   border-radius: 2rem;
   position: absolute;
@@ -793,8 +835,9 @@ section {
 .footer .footer-right-section h3 {
   font-size: 2vw;
   font-weight: 400;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   margin-bottom: 20%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer .footer-right-section .social-media-icons button {
@@ -817,8 +860,6 @@ section {
   right: 3rem;
 }
 
-
-
 /* -----------KEYFRAMES---------- */
 
 @keyframes rotate {
@@ -831,7 +872,10 @@ section {
 }
 
 @keyframes jumpDown {
-  0%, 20%, 50%, 80%{
+  0%,
+  20%,
+  50%,
+  80% {
     transform: translateY(0);
   }
   40% {
@@ -842,7 +886,6 @@ section {
     animation-delay: 3s;
   }
 }
-
 
 /* -----------MEDIA QUERIES--------- */
 
@@ -861,7 +904,7 @@ section {
     overflow: visible;
   }
 
-  .footer .footer-left-section .left-section-content .title-tagline h3{
+  .footer .footer-left-section .left-section-content .title-tagline h3 {
     font-size: 1.6rem;
   }
 }
@@ -891,12 +934,19 @@ section {
 
   .events .event-right-section .event-column img {
     width: 80px;
-    height:80px;
+    height: 80px;
   }
 
   .navikarnam .navi-left-section .navi-row img {
     height: 100px;
     width: 100px;
+  }
+
+  .landing-page-img {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -918,11 +968,14 @@ section {
     align-items: center;
     font-size: 4rem;
   }
-  
+
   .header .menu-icon {
     font-size: 4rem;
   }
 
+  .landing-page-img {
+    height: 20vh;
+  }
 }
 
 @media (max-width: 550px) {
@@ -966,7 +1019,7 @@ section {
     font-size: 45px;
   }
 
-  .about .about-right-section p{
+  .about .about-right-section p {
     text-align: center;
     font-size: 13px;
   }
@@ -999,7 +1052,7 @@ section {
   .contact .contact-left-section p {
     text-align: center;
     font-size: 10px;
-    padding-bottom: 50px;;;
+    padding-bottom: 50px;
     border-bottom: 1px solid white;
   }
 
@@ -1050,11 +1103,11 @@ section {
     gap: 20px;
   }
 
-  .events .event-info h1{
+  .events .event-info h1 {
     font-size: 25px;
   }
 
-  .events .event-info h2{
+  .events .event-info h2 {
     font-size: 12px;
   }
 
@@ -1074,7 +1127,7 @@ section {
     height: 50%;
   }
 
-  .navikarnam .navi-right-section p{
+  .navikarnam .navi-right-section p {
     font-size: 11px;
   }
 
@@ -1111,7 +1164,6 @@ section {
   }
 }
 
-
 @media (max-width: 400px) {
   .landing-page .right-img-container {
     left: 70%;
@@ -1132,6 +1184,4 @@ section {
   .footer-left-section .left-section-content .title-tagline {
     margin-top: 40px;
   }
-
 }
-
