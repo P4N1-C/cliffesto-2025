@@ -1,6 +1,6 @@
 /* FONTS  */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 @font-face {
   font-family: Anurati;
@@ -10,13 +10,12 @@
 /* COLORS */
 
 :root {
-  --orchid: #9d00c6 ;
+  --orchid: #9d00c6;
   --robin-egg-blue: #00ffed;
   --bg-color: rgb(22, 22, 22);
-  --redwood: #BD445Bff;
-  --brilliant-rose: #E462A7ff;
+  --redwood: #bd445bff;
+  --brilliant-rose: #e462a7ff;
 }
-
 
 /* ----------------DEFAULT STYLING--------------  */
 
@@ -28,7 +27,7 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -76,7 +75,7 @@ section {
 .header img {
   max-width: 100px;
   width: auto;
-} 
+}
 
 .header .navbar-items {
   display: flex;
@@ -88,7 +87,7 @@ section {
 
 .header .navbar-items a {
   color: white;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   font-family: anurati, poppins;
 }
 
@@ -119,7 +118,7 @@ section {
   display: flex;
 }
 
-.menu .menu-content{
+.menu .menu-content {
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -152,7 +151,7 @@ section {
 .menu .menu-content .menu-list a {
   font-size: 3rem;
   color: white;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   font-family: Anurati, poppins;
 }
 
@@ -175,7 +174,7 @@ section {
   font-size: 2rem;
 }
 
-.menu .menu-sidebar{
+.menu .menu-sidebar {
   width: 30%;
   border-left: 1px solid white;
   z-index: 9999;
@@ -203,7 +202,6 @@ section {
   border-radius: 2rem;
 }
 
-
 /* ---------------content---------------- */
 body.dark {
   background-color: rgb(10, 10, 10);
@@ -213,10 +211,9 @@ body.dark {
   position: fixed;
   height: 100vh;
   width: 100%;
-  background: url(images/bg-2.jpg) no-repeat;
+  background: url(images/bg-2.png) no-repeat;
   background-size: cover;
   filter: brightness(40%);
-  top: -10%;
 }
 
 .container {
@@ -362,14 +359,14 @@ body.dark {
   cursor: pointer;
 }
 .action::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
   width: 0;
   background: white;
-  transition: .3s ease;
+  transition: 0.3s ease;
   z-index: -1;
 }
 
@@ -379,13 +376,13 @@ body.dark {
   right: auto;
 }
 
-.btn { 
+.btn {
   background: transparent;
   align-items: center;
   color: white;
   overflow: hidden;
   position: relative;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .btn:hover {
@@ -394,14 +391,14 @@ body.dark {
 }
 
 .btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
   width: 0;
   background: white;
-  transition: .3s ease;
+  transition: 0.3s ease;
   z-index: -1;
 }
 
@@ -413,7 +410,7 @@ body.dark {
 
 .guidelines-container {
   width: 100%;
-  align-items: center;  
+  align-items: center;
   display: flex;
   justify-content: center;
 }
@@ -432,10 +429,10 @@ body.dark {
 }
 
 @media (max-width: 630px) {
-  .menu .menu-content .menu-list .menu-home a{
+  .menu .menu-content .menu-list .menu-home a {
     font-size: 25px;
   }
-  
+
   .header .navbar-items {
     display: none;
   }
