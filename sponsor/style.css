@@ -1,6 +1,6 @@
 /* FONTS  */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 @font-face {
   font-family: Anurati;
@@ -13,10 +13,9 @@
   --orchid: #9d00c6;
   --robin-egg-blue: #00ffed;
   --bg-color: rgb(22, 22, 22);
-  --redwood: #BD445Bff;
-  --brilliant-rose: #E462A7ff;
+  --redwood: #bd445bff;
+  --brilliant-rose: #e462a7ff;
 }
-
 
 /* ----------------DEFAULT STYLING--------------  */
 
@@ -28,7 +27,7 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -78,7 +77,7 @@ section {
 .header img {
   max-width: 100px;
   width: auto;
-} 
+}
 
 .header .navbar-items {
   display: flex;
@@ -90,7 +89,7 @@ section {
 
 .header .navbar-items a {
   color: white;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   font-family: Anurati, poppins;
 }
 
@@ -120,7 +119,7 @@ section {
   display: flex;
 }
 
-.menu .menu-content{
+.menu .menu-content {
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -152,7 +151,7 @@ section {
 .menu .menu-content .menu-list a {
   font-size: 3rem;
   color: white;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   font-family: anurati, poppins;
 }
 
@@ -173,7 +172,7 @@ section {
   font-size: 2rem;
 }
 
-.menu .menu-sidebar{
+.menu .menu-sidebar {
   width: 30%;
   border-left: 1px solid white;
   z-index: 9999;
@@ -201,8 +200,6 @@ section {
   border-radius: 2rem;
 }
 
-
-
 /* -----------------other-styling--------------- */
 
 .register {
@@ -210,14 +207,14 @@ section {
   align-items: center;
   background: url(images/bg-1.jpg);
   justify-content: center;
-  background-size: cover;  
+  background-size: cover;
   position: relative;
 }
 
 .register .container {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4) ;
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -232,24 +229,23 @@ section {
   gap: 4rem;
 }
 
-.register .container .register-content img{
+.register .container .register-content img {
   max-width: 140px;
 }
 
 .register .container .register-content h1 {
   font-size: 4rem;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   font-family: anurati, poppins;
   letter-spacing: 1rem;
 }
 
 .register .container .register-content p {
   font-size: 1.5rem;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   width: 70%;
   text-align: center;
 }
-
 
 /*/------------login-form------------ */
 
@@ -259,10 +255,10 @@ section {
   border-left: 2px solid white;
 }
 
-.register .container .login-form .wrapper{
+.register .container .login-form .wrapper {
   width: 100%;
   background: transparent;
-  border: 2px solid rgba(255, 255, 255, .2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(9px);
   color: #fff;
   border-radius: 1rem;
@@ -275,29 +271,30 @@ section {
   font-size: 1.5rem;
   display: none;
 }
-.register .container .login-form .wrapper h1{
+.register .container .login-form .wrapper h1 {
   font-size: 4rem;
   text-align: center;
 }
-.register .container .login-form .wrapper p{
+.register .container .login-form .wrapper p {
   font-size: 2rem;
   text-align: center;
   font-family: poppins;
   letter-spacing: 1px;
 }
-.register .container .login-form .wrapper .input-box{
+.register .container .login-form .wrapper .input-box {
   position: relative;
   width: 100%;
   height: 50px;
   margin: 12px 0;
 }
-.register .container .login-form .wrapper .input-box input, select{
+.register .container .login-form .wrapper .input-box input,
+select {
   width: 100%;
   height: 100%;
   background: transparent;
   border: none;
   outline: none;
-  border: 2px solid rgba(255, 255, 255, .2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 40px;
   font-size: 16px;
   color: #fff;
@@ -306,9 +303,9 @@ section {
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-    appearance: none;
-    margin: 0;
-  }
+  appearance: none;
+  margin: 0;
+}
 
 select option {
   color: black;
@@ -321,29 +318,27 @@ select::placeholder {
   columns: white;
 }
 
-.register .container .login-form .wrapper .input-box input::placeholder{
+.register .container .login-form .wrapper .input-box input::placeholder {
   color: #fff;
 }
 
-.register .container .login-form .wrapper .input-box i{
+.register .container .login-form .wrapper .input-box i {
   position: absolute;
   right: 10px;
   top: 30%;
   transform: translate(-50%);
   font-size: 2rem;
-
 }
-.register .container .login-form .wrapper .remember-forgot{
+.register .container .login-form .wrapper .remember-forgot {
   display: flex;
   justify-content: space-between;
   font-size: 1.4rem;
   margin: -15px 0 15px;
 }
 
-.register .container .login-form .wrapper .remember-forgot label input{
+.register .container .login-form .wrapper .remember-forgot label input {
   accent-color: #fff;
   margin-right: 3px;
-
 }
 
 .register .container .login-form .wrapper .btn {
@@ -353,7 +348,7 @@ select::placeholder {
   border: none;
   outline: none;
   border-radius: 40px;
-  border: 2px solid rgba(255, 255, 255, .2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
   font-size: 16px;
   color: white;
@@ -371,11 +366,11 @@ select::placeholder {
 }
 
 .learn-more::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: #fff; 
+  background-color: #fff;
   bottom: 0;
   transition: width 0.3s ease;
 }
@@ -385,28 +380,27 @@ select::placeholder {
   width: 100%;
 }
 
-
 /* -------generalised .btn styling-------- */
 
-.btn { 
+.btn {
   background: transparent;
   align-items: center;
   color: white;
   overflow: hidden;
   position: relative;
-  transition: .3s ease;
+  transition: 0.3s ease;
   z-index: 1;
 }
 
 .btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
   width: 0;
   background: white;
-  transition: .3s ease;
+  transition: 0.3s ease;
   z-index: -1;
 }
 
@@ -416,9 +410,8 @@ select::placeholder {
   right: auto;
 }
 
-
 /* Styling Mail Link */
-.sponser-mail{
+.sponser-mail {
   text-decoration: none;
   color: white;
 }
@@ -429,7 +422,7 @@ select::placeholder {
   .register .container .register-content {
     display: none;
   }
-  
+
   .register .container .login-form .wrapper b {
     display: flex;
   }
@@ -440,7 +433,7 @@ select::placeholder {
     border: none;
   }
 
-  .register .container .register-form .wrapper .input-box input{
+  .register .container .register-form .wrapper .input-box input {
     padding: 16px;
   }
 }
@@ -452,15 +445,14 @@ select::placeholder {
 }
 
 @media (max-width: 630px) {
-
   html {
     font-size: 40%;
   }
 
-  .menu .menu-content .menu-list .menu-home a{
+  .menu .menu-content .menu-list .menu-home a {
     font-size: 25px;
   }
-  
+
   .header .navbar-items {
     display: none;
   }
@@ -478,12 +470,12 @@ select::placeholder {
 }
 
 @media (max-width: 490px) {
-  .register .container .login-form .wrapper .remember-forgot label input{
+  .register .container .login-form .wrapper .remember-forgot label input {
     display: none;
   }
 
   .register .container .login-form .wrapper .remember-forgot label {
-    opacity: 0;;
+    opacity: 0;
   }
 
   .register .container .login-form,
@@ -491,4 +483,3 @@ select::placeholder {
     width: 100%;
   }
 }
-
