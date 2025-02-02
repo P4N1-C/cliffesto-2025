@@ -1,78 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- ALL LINKS  -->
-    <link rel="icon" href="../images/title-logo.png" type="image/icon type" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="style.css" />
+  <!-- ALL LINKS  -->
+  <link rel="icon" href="../images/title-logo.png" type="image/icon type" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-    <title>Cliffesto</title>
-    <style type="text/css">
-      body,
-      a,
-      button,
-      div,
-      * {
-        cursor: url("data:image/x-icon;base64,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"),
-          auto;
-      }
-    </style>
-  </head>
+  <link rel="stylesheet" href="style.css" />
 
-  <body class="dark">
-    <!-- HEADER  -->
+  <title>Cliffesto</title>
+  <style type="text/css">
+    body,
+    a,
+    button,
+    div,
+    * {
+      cursor: url("data:image/x-icon;base64,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"),
+        auto;
+    }
+  </style>
+</head>
 
-    <header class="header">
-      <div class="logo-container">
-        <img src="images/logo.png" />
-      </div>
+<body class="dark">
+  <!-- HEADER  -->
 
-      <nav class="navbar-items">
-        <a href="../index.html">HOME</a>
-        <a href="../events/events.html">EVENTS</a>
-        <a href="../register/register.html">REGISTER</a>
-      </nav>
+  <header class="header">
+    <div class="logo-container">
+      <img src="images/logo.png" />
+    </div>
 
-      <button class="bx bx-menu menu-icon" onclick="toggleMenu()"></button>
-    </header>
+    <nav class="navbar-items">
+      <a href="../index.html">HOME</a>
+      <a href="../events/events.html">EVENTS</a>
+      <a href="../register/register.html">REGISTER</a>
+    </nav>
 
-    <div class="menu">
-      <div class="menu-content">
-        <div class="menu-head">PRODYOGEEKY</div>
-        <div class="menu-list">
-          <div class="menu-home">
-            <a href="../index.html" onclick="toggleMenu()">HOME</a>
-          </div>
+    <button class="bx bx-menu menu-icon" onclick="toggleMenu()"></button>
+  </header>
 
-          <div class="menu-home">
-            <a href="../index.html#about" onclick="toggleMenu()">ABOUT</a>
-          </div>
-
-          <div class="menu-home active">
-            <a href="../events/events.html" onclick="toggleMenu()">EVENTS</a>
-          </div>
-
-          <div class="menu-home">
-            <a href="../index.html#contact" onclick="toggleMenu()">CONTACT</a>
-          </div>
-
-          <div class="menu-home">
-            <a href="../register/register.html" onclick="toggleMenu()"
-              >REGISTER</a
-            >
-          </div>
-
-          <div class="menu-home">
-            <a href="../sponsor/sponsor.html" onclick="toggleMenu()">SPONSOR</a>
-          </div>
+  <div class="menu">
+    <div class="menu-content">
+      <div class="menu-head">PRODYOGEEKY</div>
+      <div class="menu-list">
+        <div class="menu-home">
+          <a href="../index.html" onclick="toggleMenu()">HOME</a>
         </div>
+
+        <div class="menu-home">
+          <a href="../index.html#about" onclick="toggleMenu()">ABOUT</a>
+        </div>
+
+        <div class="menu-home active">
+          <a href="../events/events.html" onclick="toggleMenu()">EVENTS</a>
+        </div>
+
+        <div class="menu-home">
+          <a href="../index.html#contact" onclick="toggleMenu()">CONTACT</a>
+        </div>
+
+        <div class="menu-home">
+          <a href="../register/register.html" onclick="toggleMenu()">REGISTER</a>
+        </div>
+
+        <div class="menu-home">
+          <a href="../sponsor/sponsor.html" onclick="toggleMenu()">SPONSOR</a>
+        </div>
+      </div>
 
         <div class="menu-socials">
           <!-- <button
@@ -82,39 +78,33 @@
             <i class="bx bxl-facebook"></i>
           </button> -->
 
-          <button
-            class="btn"
-            onclick="window.location.href='https://www.instagram.com/techclubnituk/'"
-          >
-            <i class="bx bxl-instagram"></i>
-          </button>
+        <button class="btn" onclick="window.location.href='https://www.instagram.com/techclubnituk/'">
+          <i class="bx bxl-instagram"></i>
+        </button>
 
-          <button
-            class="btn"
-            onclick="window.location.href='https://www.linkedin.com/in/tcnituk/?originalSubdomain=in'"
-          >
-            <i class="bx bxl-linkedin"></i>
-          </button>
-        </div>
-      </div>
-      <div class="menu-sidebar">
-        <button class="close-button" onclick="toggleMenu()">X</button>
+        <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/tcnituk/?originalSubdomain=in'">
+          <i class="bx bxl-linkedin"></i>
+        </button>
       </div>
     </div>
+    <div class="menu-sidebar">
+      <button class="close-button" onclick="toggleMenu()">X</button>
+    </div>
+  </div>
 
-    <!-- MAIN CONTENT -->
+  <!-- MAIN CONTENT -->
 
-    <main>
-      <div class="bg-container"></div>
+  <main>
+    <div class="bg-container"></div>
 
-      <div class="container">
-        <div class="item-container">
-          <div class="img-container">
-            <img src="./images/solodance.jpg" alt="Event image" />
-          </div>
+    <div class="container">
+      <div class="item-container">
+        <div class="img-container">
+          <img src="./images/solodance.jpg" alt="Event image" />
+        </div>
 
-          <div class="body-container">
-            <div class="overlay"></div>
+        <div class="body-container">
+          <div class="overlay"></div>
 
             <div class="event-info">
               <p class="title">Solo Footwork Fiesta</p>
@@ -144,22 +134,20 @@
                 </div>
               </div>
             </div>
-            <button
-              class="action"
-              onclick="window.location.href='../register/register.html'"
-            >
-              register
-            </button>
           </div>
+          <button class="action" onclick="window.location.href='../register/register.html'">
+            register
+          </button>
+        </div>
+      </div>
+
+      <div class="item-container">
+        <div class="img-container">
+          <img src="./images/groupdance.jpg" alt="Event image" />
         </div>
 
-        <div class="item-container">
-          <div class="img-container">
-            <img src="./images/groupdance.jpg" alt="Event image" />
-          </div>
-
-          <div class="body-container">
-            <div class="overlay"></div>
+        <div class="body-container">
+          <div class="overlay"></div>
 
             <div class="event-info">
               <p class="title">Group Footwork Fiesta</p>
@@ -189,22 +177,20 @@
                 </div>
               </div>
             </div>
-            <button
-              class="action"
-              onclick="window.location.href='../register/register.html'"
-            >
-              register
-            </button>
           </div>
+          <button class="action" onclick="window.location.href='../register/register.html'">
+            register
+          </button>
+        </div>
+      </div>
+
+      <div class="item-container">
+        <div class="img-container">
+          <img src="./images/solosing.jpg" alt="Event image" />
         </div>
 
-        <div class="item-container">
-          <div class="img-container">
-            <img src="./images/solosing.jpg" alt="Event image" />
-          </div>
-
-          <div class="body-container">
-            <div class="overlay"></div>
+        <div class="body-container">
+          <div class="overlay"></div>
 
             <div class="event-info">
               <p class="title">Swar Sangam</p>
@@ -235,22 +221,20 @@
                 </div>
               </div>
             </div>
-            <button
-              class="action"
-              onclick="window.location.href='../register/register.html'"
-            >
-              register
-            </button>
           </div>
+          <button class="action" onclick="window.location.href='../register/register.html'">
+            register
+          </button>
+        </div>
+      </div>
+
+      <div class="item-container">
+        <div class="img-container">
+          <img src="./images/groupsing.jpg" alt="Event image" />
         </div>
 
-        <div class="item-container">
-          <div class="img-container">
-            <img src="./images/groupsing.jpg" alt="Event image" />
-          </div>
-
-          <div class="body-container">
-            <div class="overlay"></div>
+        <div class="body-container">
+          <div class="overlay"></div>
 
             <div class="event-info">
               <p class="title">Duet Swar Sangam</p>
@@ -280,21 +264,19 @@
                 </div>
               </div>
             </div>
-            <button
-              class="action"
-              onclick="window.location.href='../register.html'"
-            >
-              register
-            </button>
           </div>
+          <button class="action" onclick="window.location.href='../register.html'">
+            register
+          </button>
         </div>
-        <div class="item-container">
-          <div class="img-container">
-            <img src="./images/battlebands.jpg" alt="Event image" />
-          </div>
+      </div>
+      <div class="item-container">
+        <div class="img-container">
+          <img src="./images/battlebands.jpg" alt="Event image" />
+        </div>
 
-          <div class="body-container">
-            <div class="overlay"></div>
+        <div class="body-container">
+          <div class="overlay"></div>
 
             <div class="event-info">
               <p class="title">Battle of Bands</p>
@@ -322,22 +304,20 @@
                 </div>
               </div>
             </div>
-            <button
-              class="action"
-              onclick="window.location.href='../register/register.html'"
-            >
-              register
-            </button>
           </div>
+          <button class="action" onclick="window.location.href='../register/register.html'">
+            register
+          </button>
+        </div>
+      </div>
+
+      <div class="item-container">
+        <div class="img-container">
+          <img src="./images/drama.jpg" alt="Event image" />
         </div>
 
-        <div class="item-container">
-          <div class="img-container">
-            <img src="./images/drama.jpg" alt="Event image" />
-          </div>
-
-          <div class="body-container">
-            <div class="overlay"></div>
+        <div class="body-container">
+          <div class="overlay"></div>
 
             <div class="event-info">
               <p class="title">Rangmanch</p>
@@ -366,21 +346,19 @@
                 </div>
               </div>
             </div>
-            <button
-              class="action"
-              onclick="window.location.href='../register.html'"
-            >
-              register
-            </button>
           </div>
+          <button class="action" onclick="window.location.href='../register.html'">
+            register
+          </button>
         </div>
-        <div class="item-container">
-          <div class="img-container">
-            <img src="./images/cosplay.jpg" alt="Event image" />
-          </div>
+      </div>
+      <div class="item-container">
+        <div class="img-container">
+          <img src="./images/cosplay.jpg" alt="Event image" />
+        </div>
 
-          <div class="body-container">
-            <div class="overlay"></div>
+        <div class="body-container">
+          <div class="overlay"></div>
 
             <div class="event-info">
               <p class="title">Vogue Voyage</p>
@@ -408,22 +386,20 @@
                 </div>
               </div>
             </div>
-            <button
-              class="action"
-              onclick="window.location.href='../register/register.html'"
-            >
-              register
-            </button>
           </div>
+          <button class="action" onclick="window.location.href='../register/register.html'">
+            register
+          </button>
+        </div>
+      </div>
+
+      <div class="item-container">
+        <div class="img-container">
+          <img src="./images/reelmaking.webp" alt="Event image" />
         </div>
 
-        <div class="item-container">
-          <div class="img-container">
-            <img src="./images/reelmaking.webp" alt="Event image" />
-          </div>
-
-          <div class="body-container">
-            <div class="overlay"></div>
+        <div class="body-container">
+          <div class="overlay"></div>
 
             <div class="event-info">
               <p class="title">Reel Rush</p>
@@ -453,21 +429,19 @@
                 </div>
               </div>
             </div>
-            <button
-              class="action"
-              onclick="window.location.href='../register.html'"
-            >
-              register
-            </button>
           </div>
+          <button class="action" onclick="window.location.href='../register.html'">
+            register
+          </button>
         </div>
-        <div class="item-container">
-          <div class="img-container">
-            <img src="./images/photography.webp" alt="Event image" />
-          </div>
+      </div>
+      <div class="item-container">
+        <div class="img-container">
+          <img src="./images/photography.webp" alt="Event image" />
+        </div>
 
-          <div class="body-container">
-            <div class="overlay"></div>
+        <div class="body-container">
+          <div class="overlay"></div>
 
             <div class="event-info">
               <p class="title">Shutterburg</p>
@@ -496,22 +470,20 @@
                 </div>
               </div>
             </div>
-            <button
-              class="action"
-              onclick="window.location.href='../register/register.html'"
-            >
-              register
-            </button>
           </div>
+          <button class="action" onclick="window.location.href='../register/register.html'">
+            register
+          </button>
+        </div>
+      </div>
+
+      <div class="item-container">
+        <div class="img-container">
+          <img src="./images/sketch.jpg" alt="Event image" />
         </div>
 
-        <div class="item-container">
-          <div class="img-container">
-            <img src="./images/sketch.jpg" alt="Event image" />
-          </div>
-
-          <div class="body-container">
-            <div class="overlay"></div>
+        <div class="body-container">
+          <div class="overlay"></div>
 
             <div class="event-info">
               <p class="title">Artlens</p>
@@ -541,21 +513,19 @@
                 </div>
               </div>
             </div>
-            <button
-              class="action"
-              onclick="window.location.href='../register.html'"
-            >
-              register
-            </button>
           </div>
+          <button class="action" onclick="window.location.href='../register.html'">
+            register
+          </button>
         </div>
-        <div class="item-container">
-          <div class="img-container">
-            <img src="./images/scrapify.webp" alt="Event image" />
-          </div>
+      </div>
+      <div class="item-container">
+        <div class="img-container">
+          <img src="./images/scrapify.webp" alt="Event image" />
+        </div>
 
-          <div class="body-container">
-            <div class="overlay"></div>
+        <div class="body-container">
+          <div class="overlay"></div>
 
             <div class="event-info">
               <p class="title">Scrapify Competition</p>
@@ -585,22 +555,20 @@
                 </div>
               </div>
             </div>
-            <button
-              class="action"
-              onclick="window.location.href='../register/register.html'"
-            >
-              register
-            </button>
           </div>
+          <button class="action" onclick="window.location.href='../register/register.html'">
+            register
+          </button>
+        </div>
+      </div>
+
+      <div class="item-container">
+        <div class="img-container">
+          <img src="./images/starnight.jpg" alt="Event image" />
         </div>
 
-        <div class="item-container">
-          <div class="img-container">
-            <img src="./images/starnight.jpg" alt="Event image" />
-          </div>
-
-          <div class="body-container">
-            <div class="overlay"></div>
+        <div class="body-container">
+          <div class="overlay"></div>
 
             <div class="event-info">
               <p class="title">
@@ -631,39 +599,31 @@
                 <div class="guidelines-container"></div>
               </div>
             </div>
-            <button
-              class="action"
-              onclick="window.location.href='../register.html'"
-            >
-              register
-            </button>
           </div>
+          <button class="action" onclick="window.location.href='../register.html'">
+            register
+          </button>
         </div>
       </div>
-    </main>
-  </body>
+    </div>
+  </main>
+</body>
 
-  <!--=============== GSAP JS ===============-->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
-    integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+<!--=============== GSAP JS ===============-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+  integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <!--=============== SCROLL TRIGGER JS ===============-->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
-    integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+<!--=============== SCROLL TRIGGER JS ===============-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+  integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <!--=============== Baffle JS ===============-->
-  <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+<!--=============== Baffle JS ===============-->
+<script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
 
-  <!--=============== SCMOOTH SCROLL JS ===============-->
-  <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.7.1/dist/smooth-scrollbar.js"></script>
+<!--=============== SCMOOTH SCROLL JS ===============-->
+<script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.7.1/dist/smooth-scrollbar.js"></script>
 
   <!--=============== MAIN JS ===============-->
   <script src="script.js">
