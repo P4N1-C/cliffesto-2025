@@ -131,6 +131,7 @@ section {
   display: flex;
   align-items: center;
   padding-left: 4rem;
+  color: white;
 }
 
 .menu .menu-content .menu-list {
@@ -229,7 +230,6 @@ main {
   align-items: center;
   border-radius: 20px;
   transition: 700ms;
-  /* background: linear-gradient(45deg, #1a1a1a, #262626); */
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
@@ -342,7 +342,6 @@ main {
   transition: opacity 0.3s ease;
 }
 
-/* Hover effects */
 .tracker:hover ~ #card .title {
   opacity: 1;
   transform: translateY(-10px);
@@ -851,7 +850,6 @@ main {
   }
 }
 
-/* Modyfikacja istniejących styli */
 #card:hover .card-glare {
   opacity: 1;
 }

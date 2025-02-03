@@ -380,7 +380,7 @@ section {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 30px;
+  bottom: 150px;
   width: var(--width-default);
   display: flex;
   justify-content: space-between;
@@ -388,6 +388,24 @@ section {
 .arrows button {
   all: unset;
   cursor: pointer;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.arrows button:hover {
+  transition: all 0.5s ease;
+  background-color: white;
+  color: black;
+}
+
+.arrows button:hover svg {
+  color: black;
+  transition: all 0.5s ease;
 }
 
 .slider .list::after {
