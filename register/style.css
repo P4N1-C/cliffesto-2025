@@ -287,9 +287,9 @@ main {
 }
 
 .highlight {
-  color: #00ffaa;
+  color: white;
   margin-left: 5px;
-  background: linear-gradient(90deg, #5c67ff, #ad51ff);
+  background: linear-gradient(90deg, #ffd154, #6abd6e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
