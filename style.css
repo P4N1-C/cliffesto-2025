@@ -720,6 +720,10 @@ section {
   margin-top: 2rem;
 }
 
+.contact__message {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
 /* -----------------FOOTER------------- */
 
 .footer {
