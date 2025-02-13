@@ -202,13 +202,6 @@ section {
 
 /* -----------------other-styling--------------- */
 
-main {
-  background-image: url("images/bg-1.png");
-  background-position: center;
-  background-attachment: fixed;
-}
-
-/* From Uiverse.io by 00Kubi */
 .container {
   position: relative;
   width: 25rem;
@@ -879,6 +872,10 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-image: url("images/bg-1.png");
+  background-position: center;
+  background-attachment: fixed;
+  gap: 20px;
 }
 
 .accomodation {
@@ -968,18 +965,18 @@ main {
   html {
     font-size: 40%;
   }
-  main {
-    gap: -1rem;
+  .accomodation {
+    margin-top: 0px;
   }
   .menu {
     width: 100%;
   }
   .content {
     flex-direction: column;
-    padding: 150px 0;
+    padding-top: 150px;
   }
   .accomodation {
-    margin-top: 0px;
+    margin: 40px 0px;
   }
 }
 
